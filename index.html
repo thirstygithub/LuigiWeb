@@ -42,7 +42,7 @@
 <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
 
 <script>
-const TOTAL_PARTS = 24;
+const TOTAL_PARTS = 10;
 const PART_PREFIX = "./index.data.part";
 
 const status = document.getElementById("status");
@@ -74,7 +74,7 @@ async function loadSplitData() {
 
         for (let i = 0; i < TOTAL_PARTS; i++) {
 
-            const number = String(i).padStart(3, "0");
+            const number = String(i + 1).padStart(2, "0");
             const filename = PART_PREFIX + number;
 
             setStatus(
